@@ -12,7 +12,7 @@ public class SantasLittleSolver {
     public static void main(String[] args0) throws FileNotFoundException {
 
         //------------//
-        int day = 1;
+        int day = 2;
         //------------//
 
 
