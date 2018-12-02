@@ -6,18 +6,24 @@ public class SantasLittleSolver {
 
     private static final int DAY_01 = 1;
     private static final int DAY_02 = 2;
+    private static SolutionTimer timer;
 
 
 
     public static void main(String[] args0) throws FileNotFoundException {
 
+        timer = new SolutionTimer();
+
+
         //------------//
-        int day = 2;
+        int day = 1;
         //------------//
 
 
         System.out.println("\n\t\t" + "Solving for day " + day + "\n");
+        timer.start();
         solveForDay(day);
+        timer.printSolutionTime();
     }
 
 

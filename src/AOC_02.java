@@ -6,10 +6,8 @@ import java.util.Scanner;
 
         public static void solve(Scanner elf) {
 
-
             ArrayList<String> input = parse(elf);
             printSolution(getCheckSum(input), findFabricBox(input));
-
 
         }
 
