@@ -56,11 +56,10 @@ import java.util.Scanner;
 
             for(int i = 0; i < chars.length; i++) {
                 int cntFC = 1;
-                int j = i+1;
 
-                while(j != chars.length && chars[i] == chars[j]) {
+
+                for (int j = i+1; j != chars.length && chars[i] == chars[j]; j++) {
                     cntFC++;
-                    j++;
                 }
 
                 i += cntFC-1;
@@ -90,9 +89,9 @@ import java.util.Scanner;
             return match;
         }
 
-        public static boolean matches(String first, String second) {
-            char[] word = first.toCharArray();
-            char[] compare = second.toCharArray();
+        public static boolean matches(String a, String b) {
+            char[] word = a.toCharArray();
+            char[] compare = b.toCharArray();
             boolean firstFail = false;
             boolean matches = true;
 
@@ -101,18 +100,17 @@ import java.util.Scanner;
                     if(firstFail) {
                         matches = false;
                         break;
-                    } else {
-                        firstFail = true;
                     }
+                    firstFail = true;
                 }
             }
             return matches;
         }
 
-        public static String trimMatch(String first, String second) {
+        public static String trimMatch(String a, String b) {
             String match = "";
-            char[] word = first.toCharArray();
-            char[] compare = second.toCharArray();
+            char[] word = a.toCharArray();
+            char[] compare = b.toCharArray();
             for(int i = 0; i < word.length; i++) {
                 if(word[i] == compare[i]) {
                     match += word[i];
