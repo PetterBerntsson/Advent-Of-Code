@@ -37,7 +37,7 @@ public class AOC_03 {
 
 
     //Parsing and generating claims at once is slightly faster than doing them sequentially, list by list
-    public ArrayList<Claim> generateClaims(Scanner elf, HashMap<String, Integer> fabric) {
+    private ArrayList<Claim> generateClaims(Scanner elf, HashMap<String, Integer> fabric) {
 
         ArrayList<Claim> claims = new ArrayList<>();
         Claim claim;
@@ -50,7 +50,7 @@ public class AOC_03 {
         return claims;
     }
 
-    public int getConflictingAreas(HashMap<String, Integer> fabric) {
+    private int getConflictingAreas(HashMap<String, Integer> fabric) {
         int conflicts = 0;
 
         for(Map.Entry<String, Integer> area: fabric.entrySet()) {
@@ -61,7 +61,7 @@ public class AOC_03 {
         return conflicts;
     }
 
-    public void printSolution(int conflicts, int ID) {
+    private void printSolution(int conflicts, int ID) {
         System.out.println("--------------- Solution Found ---------------");
         System.out.println("Conflicts: " + conflicts);
         System.out.println("ID of non-overlapping claim: " + ID);
