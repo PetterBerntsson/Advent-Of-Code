@@ -7,6 +7,7 @@ public class SolutionTimer {
     private boolean started;
 
     public SolutionTimer() {
+
         started = false;
     }
 
@@ -22,4 +23,10 @@ public class SolutionTimer {
             System.out.println("Solution timer was never started");
         }
     }
+
+    public void lap() {
+
+    }
+
+
 }
