@@ -10,18 +10,26 @@ public class AOC_05 {
 
     }
 
+
+    //The solve is implemented by calling a script, for learning purposes, not for speed purposes
     public static void solve(Scanner elf) {
-        System.out.println(System.getProperty("user.dir"));
 
         try {
+            //the python executable absolute path
             String myPythonExecutableAbsolutePath = "C:/Users/Petter/AppData/Local/Programs/Python/Python37/python.exe";
-            String myPythonScriptAbsolutePath = "C:/Users/Petter/IdeaProjects/AOC/py-scripts/aoc_05_script.py";
-            Runtime.getRuntime().exec(myPythonExecutableAbsolutePath + " " + myPythonScriptAbsolutePath);
+            //the script absolute path
+            String myPythonScriptAbsolutePath = System.getProperty("user.dir") + "/py-scripts/aoc_05_script.py";
+            Process script = Runtime.getRuntime().exec(myPythonExecutableAbsolutePath + " " + myPythonScriptAbsolutePath);
+            try {
+                script.waitFor();
+            } catch(InterruptedException e) {
+                e.printStackTrace();
+            }
         } catch(IOException e) {
             e.printStackTrace();
         }
 
-        System.out.println(elf.nextLine());
+
 
     }
 }
