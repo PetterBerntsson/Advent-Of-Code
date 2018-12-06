@@ -7,6 +7,17 @@ public class SantasLittleSolver {
     private static final int DAY_01 = 1;
     private static final int DAY_02 = 2;
     private static final int DAY_03 = 3;
+    private static final int DAY_04 = 4;
+
+    private static final int DAY_05 = 5;
+    private static final int DAY_06 = 6;
+    private static final int DAY_07 = 7;
+    private static final int DAY_08 = 8;
+
+    private static final int DAY_09 = 9;
+    private static final int DAY_10 = 10;
+    private static final int DAY_11 = 11;
+    private static final int DAY_12 = 12;
 
     private static SolutionTimer timer;
 
@@ -18,7 +29,7 @@ public class SantasLittleSolver {
 
 
         //------------//
-        int day = 3;
+        int day = 4;
         //------------//
 
 
@@ -45,6 +56,12 @@ public class SantasLittleSolver {
                 AOC_03 aoc_03 = new AOC_03();
                 aoc_03.solve(new Scanner(new File("input-03")));
                 break;
+
+            case DAY_04:
+                AOC_04 aoc_04 = new AOC_04();
+                aoc_04.solve(new Scanner(new File("input-04")));
+                break;
+
         }
 
 
