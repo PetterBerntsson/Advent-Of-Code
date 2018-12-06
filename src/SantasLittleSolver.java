@@ -29,7 +29,7 @@ public class SantasLittleSolver {
 
 
         //------------//
-        int day = 4;
+        int day = 5;
         //------------//
 
 
@@ -60,6 +60,10 @@ public class SantasLittleSolver {
             case DAY_04:
                 AOC_04 aoc_04 = new AOC_04();
                 aoc_04.solve(new Scanner(new File("input-04")));
+                break;
+
+            case DAY_05:
+                AOC_05.solve();
                 break;
 
         }
