@@ -63,7 +63,7 @@ public class SantasLittleSolver {
                 break;
 
             case DAY_05:
-                AOC_05.solve();
+                AOC_05.solve(new Scanner(new File(AOC_05.FilePath)));
                 break;
 
         }
